@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/style.css" rel="stylesheet">
     <title>Example PWA APP</title>
-    <h1>PWA App exapmle</h1>
+    <h1>PWA APP Example</h1>
   </head>
   <body>
-    Hola a todos
+    ¡Hello PWA!
         <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js', {
+        navigator.serviceWorker.register('service-worker.js', {
           scope: '/below/'
         })
         .then(registration => {
