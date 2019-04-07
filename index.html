@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>Example PWA APP</title>
+    <h1>PWA App exapmle</h1>
+  </head>
+  <body>
+    Hola a todos
+        <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js', {
+          scope: '/below/'
+        })
+        .then(registration => {
+          console.log('SW registered with scope:', registration.scope);
+        })
+        .catch(err => {
+          console.error('Registration failed:', err);
+        });
+      });
+    }
+    </script>
+  </body>
+</html>
